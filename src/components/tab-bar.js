@@ -7,6 +7,7 @@ import SvgCreate from "./icons/Create";
 import SvgProfile from "./icons/Profile";
 import SvgNotification from "./icons/Notification";
 
+
 function TabBar({ state, descriptors, navigation }) {
   const focusedOptions = descriptors[state.routes[state.index].key].options;
 
@@ -15,7 +16,7 @@ function TabBar({ state, descriptors, navigation }) {
   }
 
   return (
-    <View style={{ flexDirection: "row" }}>
+    <View style={{ flexDirection: "row" , backgroundColor: '#262626'}}>
       {state.routes.map((route, index) => {
         const { options } = descriptors[route.key];
         const label =
@@ -40,15 +41,15 @@ function TabBar({ state, descriptors, navigation }) {
         };
 
         return label === "Home" ? (
-          <Button onPress={onPress} flex={1}>
-            <SvgHome />
+          <Button onPress={onPress} flex={1} key={label} >
+            <SvgHome stroke = {isFocused ? 'white' : '#818181' } />
           </Button>
         ) : (
-          <Button height ={50} onPress={onPress} flex= {1}>
-            {label === 'Reading List' && < SvgReadingList/>}
-            {label === 'Create' && < SvgCreate/>}
-            {label === 'Notification' && < SvgNotification/>}
-            {label === 'Profile' && < SvgProfile/>}
+          <Button height ={50} onPress={onPress} flex= {1} key={label} >
+            {label === 'Reading List' && < SvgReadingList  stroke = {isFocused ? 'white' : '#818181' }/>}
+            {label === 'Create' && < SvgCreate  stroke = {isFocused ? 'white' : '#818181' }/>}
+            {label === 'Notification' && < SvgNotification  stroke = {isFocused ? 'white' : '#818181' }/>}
+            {label === 'Profile' && < SvgProfile  stroke = {isFocused ? 'white' : '#818181' }/>}
           </Button>
         );
       })}
