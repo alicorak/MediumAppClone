@@ -9,7 +9,6 @@ import ProfileView from "./views/profile";
 import TabBar from "./components/tab-bar";
 import { SafeAreaView } from "react-native";
 import Box from "./components/box";
-import { backgroundColor } from "styled-system";
 
 const Tab = createBottomTabNavigator();
 
