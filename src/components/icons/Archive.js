@@ -3,13 +3,7 @@ import Svg, { Path } from "react-native-svg";
 
 function SvgArchive(props) {
   return (
-    <Svg
-      width="29"
-      height="29 className"
-      viewBox="0 0 29 29"
-      fill="none"
-      {...props}
-    >
+    <Svg width={29} height={29} fill="none" className="" {...props}>
       <Path
         fillRule="evenodd"
         clipRule="evenodd"

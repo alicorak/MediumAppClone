@@ -3,13 +3,7 @@ import Svg, { Path } from "react-native-svg";
 
 function SvgCheck(props) {
   return (
-    <Svg
-      width="29"
-      height="29 className"
-      viewBox="0 0 29 29"
-      fill="none"
-      {...props}
-    >
+    <Svg width={29} height={29} fill="none" className="" {...props}>
       <Path
         d="M15 4C9.477 4 5 8.477 5 14s4.477 10 10 10 10-4.477 10-10c-.006-5.52-4.48-9.994-10-10zm0 18.571A8.571 8.571 0 1123.571 14 8.58 8.58 0 0115 22.571z"
         fill="#000"

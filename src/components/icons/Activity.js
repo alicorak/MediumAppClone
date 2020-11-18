@@ -3,13 +3,7 @@ import Svg, { Circle, Path } from "react-native-svg";
 
 function SvgActivity(props) {
   return (
-    <Svg
-      width="29"
-      height="29 className"
-      viewBox="0 0 22 22"
-      fill="none"
-      {...props}
-    >
+    <Svg width={22} height={22} fill="none" className="" {...props}>
       <Circle cx={11} cy={11} r={10.5} fill="#41872C" stroke="#fff" />
       <Path
         fillRule="evenodd"
