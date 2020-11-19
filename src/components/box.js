@@ -4,4 +4,6 @@ import { compose, color, size, space } from "styled-system";
 
 const Box = styled(View)(compose(color, size, space, size));
 
+
+
 export default Box;

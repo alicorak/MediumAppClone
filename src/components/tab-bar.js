@@ -1,12 +1,12 @@
 import React from "react";
 import { View } from "react-native";
-import Button from "./button"
+import Button from "./button";
 import SvgHome from "./icons/Home";
 import SvgReadingList from "./icons/ReadingList";
 import SvgCreate from "./icons/Create";
 import SvgProfile from "./icons/Profile";
 import SvgNotification from "./icons/Notification";
-
+import theme from "../utils/theme";
 
 function TabBar({ state, descriptors, navigation }) {
   const focusedOptions = descriptors[state.routes[state.index].key].options;
@@ -16,7 +16,7 @@ function TabBar({ state, descriptors, navigation }) {
   }
 
   return (
-    <View style={{ flexDirection: "row" , backgroundColor: '#262626'}}>
+    <View style={{ flexDirection: "row", backgroundColor: "#262626" }}>
       {state.routes.map((route, index) => {
         const { options } = descriptors[route.key];
         const label =
@@ -41,15 +41,25 @@ function TabBar({ state, descriptors, navigation }) {
         };
 
         return label === "Home" ? (
-          <Button onPress={onPress} flex={1} key={label} >
-            <SvgHome stroke = {isFocused ? 'white' : '#818181' } />
+          <Button onPress={onPress} flex={1} key={label}>
+            <SvgHome stroke={ isFocused ? theme.colors.white : theme.colors.grayIcon} />
           </Button>
         ) : (
-          <Button height ={50} onPress={onPress} flex= {1} key={label} >
-            {label === 'Reading List' && < SvgReadingList  stroke = {isFocused ? 'white' : '#818181' }/>}
-            {label === 'Create' && < SvgCreate  stroke = {isFocused ? 'white' : '#818181' }/>}
-            {label === 'Notification' && < SvgNotification  stroke = {isFocused ? 'white' : '#818181' }/>}
-            {label === 'Profile' && < SvgProfile  stroke = {isFocused ? 'white' : '#818181' }/>}
+          <Button height={50} onPress={onPress} flex={1} key={label}>
+            {label === "Reading List" && (
+              <SvgReadingList
+                stroke={ isFocused ? theme.colors.white : theme.colors.grayIcon}
+              />
+            )}
+            {label === "Create" && (
+              <SvgCreate stroke={ isFocused ? theme.colors.white : theme.colors.grayIcon} />
+            )}
+            {label === "Notification" && (
+              <SvgNotification stroke={ isFocused ? theme.colors.white : theme.colors.grayIcon} />
+            )}
+            {label === "Profile" && (
+              <SvgProfile stroke={ isFocused ? theme.colors.white : theme.colors.grayIcon} />
+            )}
           </Button>
         );
       })}

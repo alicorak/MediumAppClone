@@ -11,11 +11,10 @@ ButtonOutline.defaultProps = {
   alignItems: "center",
   justifyContent: "center",
   border: "1px solid",
-  borderColor: "#41872C",
-  borderRadius: "4px",
+  borderColor: "green",
+  borderRadius: "normal",
   px: "15.5px",
   py: "7.5px",
-  fontSize: '34px'
 };
 
 export default ButtonOutline;

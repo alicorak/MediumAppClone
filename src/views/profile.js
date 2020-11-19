@@ -1,11 +1,14 @@
 import React from "react";
-import { View, Text } from "react-native";
+import { SafeAreaView, Text } from "react-native";
+import Box from "../components/box";
 
 function ProfileView() {
   return (
-    <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
-      <Text>Profile</Text>
-    </View>
+    <Box style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
+        <SafeAreaView>
+          <Text>Profil</Text>
+        </SafeAreaView>
+      </Box>
   );
 }
 

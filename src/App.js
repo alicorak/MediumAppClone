@@ -9,24 +9,29 @@ import ProfileView from "./views/profile";
 import TabBar from "./components/tab-bar";
 import { SafeAreaView } from "react-native";
 import Box from "./components/box";
+import theme from "./utils/theme";
+
+import { ThemeProvider } from "styled-components";
 
 const Tab = createBottomTabNavigator();
 
 export default function App() {
   return (
-    <Box flex={1} as={SafeAreaView} style={{backgroundColor: '#262626'}}>
-      <NavigationContainer >
-        <Tab.Navigator
-          initialRouteName="Home"
-          tabBar={(props) => <TabBar {...props} />}
-        >
-          <Tab.Screen name="Home" component={HomeView} />
-          <Tab.Screen name="Reading List" component={ReadingListView} />
-          <Tab.Screen name="Create" component={CreateView} />
-          <Tab.Screen name="Notification" component={NotificationView} />
-          <Tab.Screen name="Profile" component={ProfileView} />
-        </Tab.Navigator>
-      </NavigationContainer>
+    <ThemeProvider theme={theme}>
+      <Box flex={1} as={SafeAreaView} style={{ backgroundColor: "#262626" }}>
+        <NavigationContainer>
+          <Tab.Navigator
+            initialRouteName="Home"
+            tabBar={(props) => <TabBar {...props} />}
+          >
+            <Tab.Screen name="Home" component={HomeView} />
+            <Tab.Screen name="Reading List" component={ReadingListView} />
+            <Tab.Screen name="Create" component={CreateView} />
+            <Tab.Screen name="Notification" component={NotificationView} />
+            <Tab.Screen name="Profile" component={ProfileView} />
+          </Tab.Navigator>
+        </NavigationContainer>
       </Box>
+    </ThemeProvider>
   );
 }
