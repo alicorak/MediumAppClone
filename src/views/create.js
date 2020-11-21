@@ -1,12 +1,12 @@
 import React from 'react'
 import { View, Text } from 'react-native'
-import { backgroundColor } from 'styled-system';
+import Box from '../components/box';
 
 function CreateView() {
     return (
-        <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center'}}>
+        <Box style={{ flex: 1, justifyContent: 'center', alignItems: 'center'}}>
             <Text>Create</Text>
-        </View>
+        </Box>
     )
 }
  export default CreateView;
