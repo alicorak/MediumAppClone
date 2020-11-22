@@ -1,11 +1,11 @@
 import React from 'react'
-import { View, Text } from 'react-native'
 import Box from '../components/box';
-
+import ContentGeneral from "../components/content/content-general"
 function CreateView() {
     return (
         <Box style={{ flex: 1, justifyContent: 'center', alignItems: 'center'}}>
-            <Text>Create</Text>
+           
+            <ContentGeneral></ContentGeneral>
         </Box>
     )
 }
