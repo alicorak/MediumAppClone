@@ -8,9 +8,7 @@ function ProfileView() {
   return (
     <Box style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
       <SafeAreaView>
-        <Text>Profil</Text>
-        
-        <ProfileEdit/>
+        <ProfileEdit />
       </SafeAreaView>
     </Box>
   );
