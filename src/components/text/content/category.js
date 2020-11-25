@@ -10,7 +10,6 @@ Category.defaultProps = {
   fontStyle: "normal",
   color: "white",
   letterSpacing: 0.035,
-  textTransform: "uppercase",
 };
 
 export default Category;
