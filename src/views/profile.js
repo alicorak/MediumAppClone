@@ -2,13 +2,19 @@ import React from "react";
 import { SafeAreaView, Text } from "react-native";
 import Box from "../components/box";
 import ProfileSection from "../components/profile/profile-section";
-import ProfileEdit from "../components/profile/profile-edit";
+import Detail from "../components/tables/detail";
 
 function ProfileView() {
   return (
-    <Box style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
+    <Box
+      style={{
+        flex: 1,
+        backgroundColor: "#121212",
+      }}
+    >
       <SafeAreaView>
-        <ProfileEdit />
+        <ProfileSection />
+        <Detail />
       </SafeAreaView>
     </Box>
   );

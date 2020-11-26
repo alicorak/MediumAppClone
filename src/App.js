@@ -24,7 +24,11 @@ export default function App() {
             initialRouteName="Home"
             tabBar={(props) => <TabBar {...props} />}
           >
-            <Tab.Screen name="Home" component={HomeView} />
+            <Tab.Screen
+              name="Home"
+              component={HomeView}
+             
+            />
             <Tab.Screen name="Reading List" component={ReadingListView} />
             <Tab.Screen name="Create" component={CreateView} />
             <Tab.Screen name="Notification" component={NotificationView} />

@@ -1,12 +1,28 @@
 import React from "react";
-import { View } from "react-native";
+import { ScrollView } from "react-native-gesture-handler";
+import Box from "../components/box";
 import DailyList from "../components/content/daily-list";
+import DividerArchive from "../components/content/divider-archive";
 
 function ReadingListView() {
   return (
-    <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
-      <DailyList></DailyList>
-    </View>
+    <Box
+      style={{
+        flex: 1,
+        backgroundColor: "#121212",
+      }}
+    >
+      <ScrollView>
+        <DividerArchive />
+        <DailyList />
+        <DailyList />
+        <DailyList />
+        <DividerArchive />
+        <DailyList />
+        <DailyList />
+        <DailyList />
+      </ScrollView>
+    </Box>
   );
 }
 

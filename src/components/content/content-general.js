@@ -12,7 +12,7 @@ function ContentGeneral() {
   return (
     <Box
       flexDirection="row"
-      bg="blackBackground"
+      bg="blackContent"
       justifyContent="space-between"
     >
       <Box width={235} mx={18} mt={20} mb={5}>

@@ -14,7 +14,7 @@ Heading.defaultProps = {
     color:"white",
     letterSpacing: 0.01,
     lineHeight: 40,
-    bg:"blackBackground"
+    bg:"blackContent"
 }
 
 export default Heading;

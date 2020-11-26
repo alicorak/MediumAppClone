@@ -1,4 +1,6 @@
 import React from "react";
+import { isRequired } from "react-native/Libraries/DeprecatedPropTypes/DeprecatedColorPropType";
+import { isEnabled } from "react-native/Libraries/Performance/Systrace";
 import Box from "../box";
 import Title from "../text/header/title";
 

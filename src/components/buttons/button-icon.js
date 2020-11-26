@@ -5,7 +5,7 @@ import BottomName from "../text/article/bottom-name";
 
 function ButtonIcon() {
   return (
-    <ButtonOutline>
+    <ButtonOutline mx={18} my={18}>
       <BottomName mr={3}>Done for Today</BottomName>
       <SvgCheck stroke="white" height={23} width={23} />
     </ButtonOutline>
